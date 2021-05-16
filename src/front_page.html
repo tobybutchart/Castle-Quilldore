@@ -1,0 +1,71 @@
+<!doctype html>
+ <html>
+ <head>
+	<link rel="icon" type="image/png" href="skull.png">
+	<title>Castle Quilldore</title>
+	<meta name="description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+	<meta name="keywords" content="HTML5 game, create your own adventure, cyoa, online gamebook, gamebook, castle quilldore, quilldore, BishMusic, Bish Music, Toby Butchart, online game">
+	<meta name="author" content="Toby Butchart">
+	<meta charset="UTF-8">
+		<style>
+		body 
+			{background-image:url("front_background2.jpg");}
+			
+		#screen
+			{
+			position: absolute;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: 200px;
+			margin-left: 200px;
+			z-index: 1;
+			}
+			
+		#keyboard
+			{
+			position: absolute;
+			margin-top: 540px;
+			margin-bottom: 0px;
+			margin-right: 200px;
+			margin-left: 240px;
+			z-index:-1;
+			}
+			
+		</style>
+		
+		<script>
+		function firstFunction()
+		{
+		alert("For best gameplay do not play this in Internet Explorer.");
+		}
+		</script>
+ </head>
+	 <body onload="firstFunction()">
+	 
+	 <embed src="start_screen.mp3" hidden="true">
+	
+	 <script>
+			function myFunction()
+			{
+			var x;
+			var r=confirm("Do You Need Instructions?");
+			if (r==true)
+			  {
+			  
+			  x=window.location.assign("instructions.html");
+				 
+			  }
+			else
+		      {	
+			  
+			  x=window.location.assign("Gamesite.html");
+			    
+			  }
+			  document.getElementById("demo").innerHTML=x;
+			  }
+	</script>				
+	 <a href="javascript:myFunction" value="alert" onclick="myFunction()"><img id="screen" border="0" src="screen_front_done2.png" onmouseover="this.src='https://dl.dropbox.com/u/48251193/screen_with_text.gif'" onmouseout="this.src='screen_front_done2.png'"alt="Castle Quilldore" width="900" height="650"></a>
+	 <img id="keyboard" border="0" src="keyboardshaped.png" alt="Castle Quilldore" width="800" height="250">
+	 </body>
+ </html>
+ 

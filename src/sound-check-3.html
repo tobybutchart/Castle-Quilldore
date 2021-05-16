@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="img/skull.png">
+<title>Sound MP3</title>
+<style>
+body{
+background: #008000;
+cursor: url(img/sword_cursor.png), auto;
+}
+p{
+color: #008000;
+}
+button{
+cursor: inherit;
+}
+button:hover{
+cursor: inherit;
+}
+#noteButton {
+height: 70px;
+}
+#onButton {
+height: 70px;
+}
+#upButton {
+height: 70px;
+}
+#downButton {
+height: 70px;
+}
+</style>
+</head>
+<audio id="player" autoplay="1" loop="1">
+<source src="res/main_theme.mp3" type="audio/mpeg" />
+</audio>
+<p>No audio?
+<button id="noteButton" onclick="document.getElementById('player').pause()"><img border="0" src="img/pause02.png" width="60" height="60"></button>
+<button id="onButton" onclick="document.getElementById('player').play()"><img border="0" src="img/play.png" width="60" height="60"></button>
+<button id="upButton" onclick="document.getElementById('player').volume+=0.1"><img border="0" src="img/volume_up.png" width="60" height="60"></button>
+<button id="downButton" onclick="document.getElementById('player').volume-=0.1"><img border="0" src="img/volume_down.png" width="60" height="60"></button>
+Click HERE</p>
+</body>
+</html>

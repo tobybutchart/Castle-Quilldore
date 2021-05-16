@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="img/skull.png">
+        <title>Castle Quilldore</title>
+        <meta name="description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+        <meta name="keywords" content="HTML5 game, create your own adventure, cyoa, online gamebook, gamebook, castle quilldore, quilldore, BishMusic, Bish Music, Toby Butchart, online game">
+        <meta name="author" content="Toby Butchart">
+        <style>
+            body{
+                background-image:url("img/front_background2.jpg");
+            }
+            #screen{
+                width: 800px;
+                height: 600px;
+                text-align: center;
+                z-index: 1;
+            }
+            #keyboard{
+                width: 800px;
+                height: 600px;
+                text-align: center;
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="player" controls autoplay loop>
+            <source src="res/start_screen.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function confirmInstructions(){
+                var x;
+                var r = confirm("Do You Need Instructions?");
+
+                if (r == true) {
+                    x=window.location.assign("instructions.html");
+                }else{
+                    x=window.location.assign("Gamesite.html");
+                }
+
+                document.getElementById("demo").innerHTML=x;
+            }
+        </script>
+        <div style="width: 100%; text-align: center;">
+            <a href="Javascript:confirmInstructions" value="alert" onclick="confirmInstructions()">
+                <img border="0" src="img/commodore.png" onmouseover="this.src='img/commodore.gif'" onmouseout="this.src='img/commodore.png'"alt="Castle Quilldore">
+            </a>
+        </div>
+        <!-- <img id="keyboard" border="0" src="img/keyboardshaped.png" alt="Castle Quilldore" width="800" height="250"> -->
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="img/skull.png">
+        <title>Castle Quilldore</title>
+        <link rel="stylesheet" href="css/Gamesite-css.css">
+    </head>
+    <body>
+        <audio id="player" autoplay loop>
+            <source src="res/main_theme.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <div id="onelayer">
+            <header>
+                <h1><img border="0" src="img/titleinscroll_03.png" alt="title" width="650" height="150"></h1>
+            </header>
+            <span id=leftscroll>
+                <!-- <br> -->
+                <!-- <div id="audio_controls_left">
+                    <button onclick="document.getElementById('player').play()">Play</button>
+                    <button onclick="document.getElementById('player').pause()">Pause</button>
+                </div>
+                <div id="audio_controls_right">
+                    <button onclick="document.getElementById('player').volume+=0.1">Vol. Up</button>
+                    <button onclick="document.getElementById('player').volume-=0.1">Vol. Down</button>
+                </div>
+                <h2 id="gameplay"><strong>G a m e p l a y</strong></h2> -->
+                <div id="audio_controls">
+                    <button id="noteButton" onclick="document.getElementById('player').pause()"><img border="0" src="img/pause02.png" width="60" height="60"></button>
+                    <button id="onButton" onclick="document.getElementById('player').play()"><img border="0" src="img/play.png" width="60" height="60"></button>
+                    <button id="upButton" onclick="document.getElementById('player').volume+=0.1"><img border="0" src="img/volume_up.png" width="60" height="60"></button>
+                    <button id="downButton" onclick="document.getElementById('player').volume-=0.1"><img border="0" src="img/volume_down.png" width="60" height="60"></button>
+                </div>
+                <iframe id="adventure" src="pages/page_01.html" frameborder="1" width="530" height="460" scrolling="yes"></iframe>
+            </span>
+            <div id="rightscroll">
+                <br>
+                <br>
+                <iframe id="dice" src="dice.html" frameborder="0" width="200" height="500" scrolling="no"></iframe>
+            </div>
+        </div>
+    </body>
+</html>

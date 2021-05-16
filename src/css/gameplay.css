@@ -1,0 +1,286 @@
+body{
+	background: #BB;
+	cursor: url(../img/sword_cursor.png), auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	}
+
+p {
+	margin: 4px auto;
+	font-family:Arial,Helvetica,sans-serif;
+	}
+
+input{
+	cursor: inherit;
+	}
+
+-webkit-scrollbar{
+	cursor: inherit;
+	}
+
+img.first_layer_picture{
+	left: 0px;
+	top: 0px;
+	}
+
+img.second_layer_picture{
+	position: relative;
+	left: 40px;
+	top :-60px;
+	z-index: 0;
+	}
+
+img.rock{
+	position: relative;
+	left: 115px;
+	top :-100px;
+	z-index: 0;
+	}
+
+img.third_layer_picture{
+	position: relative;
+	left: 0px;
+	top : -255px;
+	z-index: 0;
+	}
+
+img.tile_c
+	{
+	opacity:1.0;
+	}
+img.tile_c:hover
+	{
+	opacity:0.4;
+	}
+
+img.tile_a
+	{
+	opacity:1.0;
+	}
+img.tile_a:hover
+	{
+	opacity:0.4;
+	}
+
+img.tile_s
+	{
+	opacity:1.0;
+	}
+img.tile_s:hover
+	{
+	opacity:0.4;
+	}
+
+img.tile_p
+	{
+	opacity:1.0;
+	}
+img.tile_p:hover
+	{
+	opacity:0.4;
+	}
+
+img.tile_e
+	{
+	opacity:1.0;
+	}
+img.tile_e:hover
+	{
+	opacity:0.4;
+	}
+
+img.tile_r
+	{
+	opacity:1.0;
+	}
+img.tile_r:hover
+	{
+	opacity:0.4;
+	}
+
+a{
+	cursor: inherit;
+	}
+
+a:hover{
+	cursor: inherit;
+	}
+
+#textbox{
+	width: 492px;
+	border: 4px solid #000000;
+	margin: 0px auto;
+	text-align: left;
+	background: #FFFFFF;
+	border-radius: 0px;
+	box-shadow: none;
+	}
+
+
+#firstletter{
+	float: left;
+	margin: 4px auto;
+	}
+
+#text{
+	color: #FFFFFF;
+	width: 410px;
+
+	border: 4px solid #000000;
+	margin: 4px auto;
+	padding: 6px;
+	text-align: left;
+	background: #008000;
+	border-radius: 0px;
+	box-shadow: none;
+	}
+
+#actionbox{
+	width: 410px;
+	height: 250px;
+	border: 4px solid #000000;
+	margin: 4px auto;
+	padding: 6px;
+	text-align: left;
+	background: #008000;
+	border-radius: 0px;
+	box-shadow: none;
+	}
+
+#left_button{
+	float: Left;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-right:0px;
+	padding-left:100px;
+	}
+
+#middle_button{
+	float: Left;
+	padding-top: -100px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 160px;
+	}
+
+#right_button{
+	float: right;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-right:100px;
+	padding-left:0px;
+	}
+
+#blue_guard{
+	position: relative;
+	left: 45px;
+	top :-205px;
+	}
+
+#red_guard{
+	position: relative;
+	right: 37px;
+	top :-205px;
+	}
+
+#armoury{
+	position: relative;
+	right: -10px;
+	top :-205px;
+	}
+
+#potion{
+	position: relative;
+	left: 210px;
+	top : -165px;
+	}
+
+#actionbox_no_height{
+	width: 410px;
+	border: 4px solid #000000;
+	margin: 4px auto;
+	padding: 6px;
+	text-align: left;
+	background: #008000;
+	border-radius: 0px;
+	box-shadow: none;
+	}
+
+#candle{
+	position: relative;
+	left: 50px;
+	top : -205px;
+	}
+
+#mace{
+	position: relative;
+	left: 200px;
+	top : -205px;
+	}
+
+.button_tiles{
+	background: #000000;
+	height: 250px;
+	width: 410px;
+	}
+
+#buttons_column_01{
+	position: relative;
+	left: 0px;
+	top : 0px;
+    }
+
+#buttons_column_02{
+	position: relative;
+	left: 104px;
+	top : -252px;
+	}
+
+#buttons_column_03{
+	border: 2px #000000;
+	position: relative;
+	left:208px;
+	top : -504px;
+	}
+
+#buttons_column_04{
+	position: relative;
+	left: 312px;
+	top : -756px;
+	}
+
+.tile_c{
+	position: relative;
+	left: 60px;
+	top: -160px;
+	}
+
+.tile_a{
+	position: relative;
+	left: 85px;
+	top: -200px;
+	}
+
+.tile_s{
+	position: relative;
+	left: 118px;
+	top: -220px;
+	}
+
+.tile_p{
+	position: relative;
+	left: 180px;
+	top: -200px;
+	}
+
+.tile_e{
+	position: relative;
+	left: 210px;
+	top: -160px;
+	}
+
+.tile_r{
+	position: relative;
+	left: 238px;
+	top: -120px;
+	}
