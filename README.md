@@ -1,12 +1,12 @@
 <p align="center">
-    <img src="res/logo.png" alt="SNAP" width="225" height="110">
+    <img src="res/logo.png" alt="Castle Quilldore">
 </p>
 <h3 align="center">Castle Quilldore</h3>
 <hr>
 <p align="center">
   <a href="../../issues">Report an Issue</a>
   ·
-  <a href="/ROADMAP.md">Roadmap</a>
+  <a href="../../releases">Releases</a>
   ·
   <a href="/CHANGELOG.md">Change Log</a>
 </p>
@@ -26,4 +26,4 @@ Help the brave knight Drakhelm find his way through Castle Quilldore to battle t
 Date | Issue | Status |
 :--: | ----- | ------ |
 16/05/2021 | Switch to Bootstrap 5 | incomplete |
-16/05/2021 | Change to PHP to stop the excessive amounts of code repetition |
+16/05/2021 | Change to PHP to stop the excessive amounts of code repetition | incomplete |
