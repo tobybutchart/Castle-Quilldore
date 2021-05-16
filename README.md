@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="res/logo.png" alt="Castle Quilldore">
+    <img src="res/castle-quilldore.png" alt="Castle Quilldore">
 </p>
 <h3 align="center">Castle Quilldore</h3>
 <hr>
