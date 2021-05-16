@@ -20,7 +20,9 @@
 ## Description
 My first ever website... Written in 2012, Castle Quilldore is an RPG designed to utilise a lot of new (for 2012) features introduced in HTML5.  
 
-Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.
+Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.  
+
+See it in action [here](https://tobybutchart.github.io/castle-quilldore/src/)
 
 ## Roadmap
 Date | Issue | Status |
