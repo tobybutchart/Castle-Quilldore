@@ -1,43 +1,43 @@
 <!doctype html>
 <html>
-<head>
-<link rel="icon" type="image/png" href="../img/skull.png">
-<title>Page 28</title>
-<link rel="stylesheet" href="../css/gameplay.css">
-<script language="JavaScript">
-var password;
-var pass1 = "Casper";
-password = prompt('What is the name of the sniggering ghoul?', '');
-if (password.toLowerCase() == pass1.toLowerCase()){
-    alert('That Is Correct!');
-}else{
-    location = "page_27_01.html"
-}
-</script>
-</head>
-<body>
-<div id="textbox">
-<div id="actionbox">
-<img class="first_layer_picture" border="0" src="../img/page_28.png" width="410" height="250">
-<br>
-</div>
-<div id="text"><img id="firstletter" border="0" src="../img/font_w.png" alt="W" width="50" height="50"><br>
-<p>ell done, you guessed <i>Casper's</i> name.</p><br>
-<p><i>Drakhelm</i> now faces three doors.</p>
-<br>
-<p><i>Choose Left or Right or Straight.</i></p>
-<br>
-<form id="right_button" method="link" action="page_33.html">
-<input type="submit" value="Right?">
-</form>
-<form id="left_button" method="link" action="page_29.html">
-<input type="submit" value="Left?">
-</form>
-<form id="middle_button" method="link" action="page_31.html">
-<input type="submit" value="Straight?">
-</form>
-<br><br><br>
-</div>
-</div>
-</body>
+    <head>
+        <link rel="icon" type="image/png" href="../img/skull.png">
+        <title>Page 28</title>
+        <link rel="stylesheet" href="../css/gameplay.css">
+        <script language="JavaScript">
+            var password = prompt('What is the name of the sniggering ghoul?', '');
+            var answer = "Casper";
+
+            if (password.toLowerCase() == answer.toLowerCase()){
+                alert('That Is Correct!');
+            }else{
+                location = "page_27_01.html"
+            }
+        </script>
+    </head>
+    <body>
+        <div id="textbox">
+            <div id="actionbox">
+                <img class="first_layer_picture" border="0" src="../img/page_28.png" width="410" height="250">
+                <br>
+            </div>
+            <div id="text"><img id="firstletter" border="0" src="../img/font_w.png" alt="W" width="50" height="50"><br>
+                <p>ell done, you guessed <i>Casper's</i> name.</p><br>
+                <p><i>Drakhelm</i> now faces three doors.</p>
+                <br>
+                <p><i>Choose Left or Right or Straight.</i></p>
+                <br>
+                <form id="right_button" method="link" action="page_33.html">
+                    <input type="submit" value="Right?">
+                </form>
+                <form id="left_button" method="link" action="page_29.html">
+                    <input type="submit" value="Left?">
+                </form>
+                <form id="middle_button" method="link" action="page_31.html">
+                    <input type="submit" value="Straight?">
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </body>
 </html>
