@@ -31,17 +31,14 @@
             <img  src="img/strength_points.png" width="140" height="30">
             <input type="number" name="strength_points" value="10" min="0" max="100" style="width:95%;">
         </div>
-        <!-- <p>If this dice does not work</p>
-        <p> -- please click <a href="dice_mobile.html">HERE</a> -- </p> -->
     </body>
     <script>
         function checkInput(){
             var x = document.getElementById("health_points");
 
             if(x.value == 0){
-                parent.document.location.href = "GameOver.html";
+                parent.document.location.href = "gameover.html";
             }
-            // console.log(x.value);
         }
     </script>
 </html>
