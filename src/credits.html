@@ -5,17 +5,25 @@
         <title>Credits</title>
         <style>
             body{
-                background-image:url("img/field_of_stars_full.jpg");
+                /* background-image:url("img/field_of_stars_full.jpg"); */
+                background-color:black;
+                background-image:
+                radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.15) 1.5px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 1px),
+                radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 3px);
+                background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+                background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
             }
             div{
                 text-align: center;
             }
-            #credits{
+            /* #credits{
                 position: relative;
                 margin:0px auto;
                 text-align: center;
                 margin-top: -20px;
-            }
+            } */
         </style>
     </head>
     <body>
@@ -23,7 +31,10 @@
             <source src="res/start_screen.mp3" type="audio/mpeg">
         </audio>
         <div>
-            <img id="credits" border="0" src="img/credits.gif" alt="Credits" width="800" height="600">
+            <!-- <img id="credits" border="0" src="img/credits.gif" alt="Credits" width="800" height="600"> -->
+            <video width="100%" autoplay muted>
+                <source src="img/credits.mp4" type="video/mp4">
+            </video>
         </div>
         <div>
             <a href="play.html" style="color: #fff;"><p><strong>PLAY AGAIN?</strong></p></a>

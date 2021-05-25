@@ -32,3 +32,4 @@ Date | Issue | Status |
 16/05/2021 | Rewrite using Bootstrap 5 | incomplete |
 16/05/2021 | Rewrite using PHP to stop the excessive amounts of code repetition | incomplete |
 16/05/2021 | Change layout to use [SWAT](https://github.com/tobybutchart/SWAT) | incomplete |
+25/05/2021 | Calculate HP/SP automatically | incomplete |
