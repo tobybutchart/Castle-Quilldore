@@ -1,26 +1,20 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 16</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="text"><img id="firstletter" border="0" src="../img/font_d.png" alt="D" width="50" height="50"><br>
-                <p><i>rakhelm</i> enters a small room and finds some potion on the table.</p><br>
-                <p><i>Do you wish to drink the potion?</i></p>
-                <form id="right_button" method="link" action="page_18.html">
-                    <input type="submit" value="Don't drink it?">
-                </form>
-                <form id="left_button" method="link" target="_parent" action="../gameover.html">
-                    <input type="submit" value="Drink it?">
-                </form>
-                <br>
+        <div id="gameplay-area">
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_d.png" alt="D">
+                    <p><i>rakhelm</i> enters a small room and finds some potion on the table.</p>
+                    <p><i>Do you wish to drink the potion?</i></p>
+                </div>
             </div>
-            <div id="actionbox">
-                <img class="first_layer_picture" border="0" src="../img/potion_green.gif" width="410" height="250">
-                <br>
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/potion_green.gif">
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="goDie()">Drink It?</button>
+                <button onclick="loadPage('pages/page_18.html')">Don't Drink It?</button>
             </div>
         </div>
     </body>

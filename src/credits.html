@@ -1,44 +1,53 @@
 <!doctype html>
-<html>
-    <head>
-        <link rel="icon" type="image/png" href="img/skull.png">
-        <title>Credits</title>
-        <style>
-            body{
-                /* background-image:url("img/field_of_stars_full.jpg"); */
-                background-color:black;
-                background-image:
-                radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px),
-                radial-gradient(white, rgba(255,255,255,.15) 1.5px, transparent 3px),
-                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 1px),
-                radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 3px);
-                background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-                background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-            }
-            div{
-                text-align: center;
-            }
-            /* #credits{
-                position: relative;
-                margin:0px auto;
-                text-align: center;
-                margin-top: -20px;
-            } */
-        </style>
-    </head>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="version" content="2.0.0">
+		<title>Credits</title>
+		<meta name="author" content="Toby Butchart">
+		<meta name="description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+        <meta name="keywords" content="HTML5 game, create your own adventure, cyoa, online gamebook, gamebook, castle quilldore, quilldore, BishMusic, Bish Music, Toby Butchart, online game">
+        <meta name="subject" content="Castle Quilldore">
+		<meta name="application-name" content="Castle Quilldore">
+		<meta name="theme-color" content="#693A25">
+		<meta property="og:url" content="">
+		<meta property="og:locale" content="en">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Castle Quilldore">
+		<meta property="og:image" content="img/android-chrome-512x512.png">
+		<meta property="og:image:alt" content="Castle Quilldore">
+		<meta property="og:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta property="og:site_name" content="Castle Quilldore">
+		<meta property="article:author" content="Toby Butchart">
+		<meta name="twitter:url" content="">
+		<meta name="twitter:title" content="Castle Quilldore">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta name="twitter:image" content="img/android-chrome-512x512.png">
+		<meta name="twitter:image:alt" content="Castle Quilldore">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#693A25">
+        <meta name="msapplication-TileColor" content="#693A25">
+        <meta name="theme-color" content="#693A25">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Press+Start+2P">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=VT323">
+		<link rel="stylesheet" href="css/style.min.css?v=1.0.0">
+		<link rel="stylesheet" href="msg/css/msg.min.css?v=1.0.0">
+	</head>
     <body>
-        <audio id="player" controls autoplay loop>
-            <source src="res/start_screen.mp3" type="audio/mpeg">
-        </audio>
-        <div>
-            <!-- <img id="credits" border="0" src="img/credits.gif" alt="Credits" width="800" height="600"> -->
-            <video width="100%" autoplay muted>
-                <!-- <source src="img/credits.mp4" type="video/mp4"> -->
-				<source src="castle-quilldore-screen-crawl" type="video/mp4">
+        <div class="full-screen">
+            <video style="width: 82%" controls autoplay>
+				<source src="video/castle-quilldore-screen-crawl.mp4" type="video/mp4">
             </video>
+            <a href="play.html" style="font-family: 'Press Start 2P'; color: white;"><p><strong>PLAY AGAIN?</strong></p></a>
         </div>
-        <div>
-            <a href="play.html" style="color: #fff;"><p><strong>PLAY AGAIN?</strong></p></a>
-        </div>
+		<script type="text/javascript" src="msg/js/msg.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/init.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/gamepley.min.js?v=1.0.0"></script>
     </body>
 </html>

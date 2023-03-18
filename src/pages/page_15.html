@@ -1,28 +1,20 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 15</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="actionbox">
-                <img class="first_layer_picture" border="0" src="../img/page_15.png" width="410" height="250">
-                <br>
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/page_15.png">
             </div>
-            <div id="text"><img id="firstletter" border="0" src="../img/font_y.png" alt="D" width="50" height="50"><br>
-                <p>ou find yourself in an empty corridor.</p>
-                <br>
-                <p><i>Do you want to go left or right?</i></p>
-                <br>
-                <form id="right_button" method="link" action="page_16.html">
-                    <input type="submit" value="Right?">
-                </form>
-                <form id="left_button" method="link" action="page_17.html">
-                    <input type="submit" value="Left?">
-                </form>
-                <br>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_y.png" alt="Y">
+                    <p>ou find yourself in an empty corridor.</p>
+                    <p><i>Do you want to go left or right?</i></p>
+                </div>
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="loadPage('pages/page_17.html')">Left?</button>
+                <button onclick="loadPage('pages/page_16.html')">Right?</button>
             </div>
         </div>
     </body>

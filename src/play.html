@@ -1,45 +1,110 @@
 <!doctype html>
-<html>
-    <head>
-        <link rel="icon" type="image/png" href="img/skull.png">
-        <title>Castle Quilldore</title>
-        <link rel="stylesheet" href="css/Gamesite-css.css">
-    </head>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="version" content="2.0.0">
+		<title>Welcome to Castle Quilldore</title>
+		<meta name="author" content="Toby Butchart">
+		<meta name="description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+        <meta name="keywords" content="HTML5 game, create your own adventure, cyoa, online gamebook, gamebook, castle quilldore, quilldore, BishMusic, Bish Music, Toby Butchart, online game">
+        <meta name="subject" content="Castle Quilldore">
+		<meta name="application-name" content="Castle Quilldore">
+		<meta name="theme-color" content="#693A25">
+		<meta property="og:url" content="">
+		<meta property="og:locale" content="en">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Castle Quilldore">
+		<meta property="og:image" content="img/android-chrome-512x512.png">
+		<meta property="og:image:alt" content="Castle Quilldore">
+		<meta property="og:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta property="og:site_name" content="Castle Quilldore">
+		<meta property="article:author" content="Toby Butchart">
+		<meta name="twitter:url" content="">
+		<meta name="twitter:title" content="Castle Quilldore">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta name="twitter:image" content="img/android-chrome-512x512.png">
+		<meta name="twitter:image:alt" content="Castle Quilldore">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#693A25">
+        <meta name="msapplication-TileColor" content="#693A25">
+        <meta name="theme-color" content="#693A25">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Press+Start+2P">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=VT323">
+		<link rel="stylesheet" href="msg/css/msg.min.css?v=1.0.0">
+		<link rel="stylesheet" href="css/style.min.css?v=1.0.0">
+		<link rel="stylesheet" href="css/play.min.css?v=1.0.0">
+	</head>
     <body>
-        <audio id="player" autoplay loop>
-            <source src="res/main_theme.mp3" type="audio/mpeg">
-        </audio>
-        <br>
-        <div id="onelayer">
-            <header>
-                <!-- <h1> -->
-                    <img border="0" src="img/titleinscroll_03.png" alt="title" style="width: 100%; max-width: 650px; padding-top: 15px;">
-                <!-- </h1> -->
-            </header>
-            <span id=leftscroll>
-                <!-- <br> -->
-                <!-- <div id="audio_controls_left">
-                    <button onclick="document.getElementById('player').play()">Play</button>
-                    <button onclick="document.getElementById('player').pause()">Pause</button>
-                </div>
-                <div id="audio_controls_right">
-                    <button onclick="document.getElementById('player').volume+=0.1">Vol. Up</button>
-                    <button onclick="document.getElementById('player').volume-=0.1">Vol. Down</button>
-                </div>
-                <h2 id="gameplay"><strong>G a m e p l a y</strong></h2> -->
-                <div id="audio_controls">
-                    <button id="noteButton" onclick="document.getElementById('player').pause()"><img border="0" src="img/pause02.png" width="60" height="60"></button>
-                    <button id="onButton" onclick="document.getElementById('player').play()"><img border="0" src="img/play.png" width="60" height="60"></button>
-                    <button id="upButton" onclick="document.getElementById('player').volume+=0.1"><img border="0" src="img/volume_up.png" width="60" height="60"></button>
-                    <button id="downButton" onclick="document.getElementById('player').volume-=0.1"><img border="0" src="img/volume_down.png" width="60" height="60"></button>
-                </div>
-                <iframe id="adventure" src="pages/page_01.html" frameborder="1" width="530" height="460" scrolling="yes"></iframe>
-            </span>
-            <div id="rightscroll">
-                <br>
-                <br>
-                <iframe id="dice" src="dice.html" frameborder="0" width="200" height="500" scrolling="no"></iframe>
+		<header>
+			<img src="img/titleinscroll_03.png" alt="Castle Quilldore" style="width: 100%; max-width: 650px; padding-top: 15px;">
+			<audio id="player" autoplay loop>
+				<source src="audio/main_theme.mp3" type="audio/mpeg">
+			</audio>
+			<div id="audio-controls">
+                <button id="noteButton"><img border="0" src="img/pause02.png" width="40" height="40"></button>
+                <button id="onButton"><img border="0" src="img/play.png" width="40" height="40"></button>
+                <button id="upButton"><img border="0" src="img/volume_up.png" width="40" height="40"></button>
+                <button id="downButton"><img border="0" src="img/volume_down.png" width="40" height="40"></button>
             </div>
-        </div>
+		</header>
+		<div id="main-container">
+			<div id="stats-container">
+				<div id="stats-area">
+					<img id="img-scroll" src="img/scroll_03.png" alt="Scroll">
+					<table id="tbl-stats">
+						<tr>
+							<td colspan="3">
+								<section id="dice-wrapper">
+									<section id="dice-container">
+										<div id="dice">
+											<section class="left side"><img src="img/dice_01.png"></section>
+											<section class="back side"><img src="img/dice_02.png"></section>
+											<section class="right side"><img src="img/dice_03.png"></section>
+											<section class="front side"><img src="img/dice_04.png"></section>
+											<section class="top side"><img src="img/dice_05.png"></section>
+											<section class="bottom side"><img src="img/dice_06.png"></section>
+										</div>
+									</section>
+								</section>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<button id="btn-roll" onclick="rollDice()"><img src="img/rollthedice.png"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="img/heart.png"></td>
+							<td><img src="img/health_points.png"></td>
+							<td><p id="lbl-stats-health" class="lbl-stats">-</p></td>
+						</tr>
+						<tr>
+							<td><img src="img/sword_small.png"></td>
+							<td><img src="img/strength.png"></td>
+							<td><p id="lbl-stats-strength" class="lbl-stats">-</p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="gameplay-container">
+				<div id="book-container">
+					<img id="book-img" src="../img/book-lg-bkm.png">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="msg/js/msg.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/init.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/gameplay.min.js?v=1.0.0"></script>
+		<script type="text/javascript" src="/js/dice.min.js?v=1.0.0"></script>
+		<script type="text/javascript" src="/js/audio.min.js?v=1.0.0"></script>
+		<script type="text/javascript">
+			load();
+		</script>
     </body>
 </html>

@@ -1,26 +1,20 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 38</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="actionbox_no_height">
-                <img class="first_layer_picture" border="0" src="../img/great_axe.gif" width="410" height="250">
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/great_axe.gif">
             </div>
-            <div id="text"><img id="firstletter" border="0" src="../img/font_y.png" alt="D" width="50" height="50"><br>
-                <p>ou chose the <i>Axe of Byzarnouth</i>.</p>
-                <br>
-                <p>This axe was once used in the <i>Great Battle of Farlenk</i>.</p>
-                <br>
-                <p><i>Add 2 Strength points and click continue.</i></p>
-                <br>
-                <form id="middle_button" method="link" action="page_39.html">
-                    <input type="submit" value="Continue">
-                </form>
-                <br>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_y.png" alt="A">
+                    <p>ou chose the <i>Axe of Byzarnouth</i>.</p>
+                    <p>This axe was once used in the <i>Great Battle of Farlenk</i>.</p>
+                    <p><i>Click continue to add 2 Strength points and carry on your quest....</i></p>
+                </div>
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="choseWeapon(2, 'sp')">Continue</button>
             </div>
         </div>
     </body>

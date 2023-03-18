@@ -1,27 +1,20 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 02</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="actionbox">
-                <img class="first_layer_picture" border="0" src="../img/page_02_image.png" width="410" height="250">
-                <br>
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/page_02_image.png">
             </div>
-            <div id="text"><img id="firstletter" border="0" src="../img/font_d.png" alt="A" width="50" height="50"><br>
-                <p><i>rakhelm</i> arrives at the front door to find a <i>Krillargian Guard</i>.</p>
-                <br>
-                <p><i>Do you want to turn around and head to the back door or stay and fight?</i></p>
-                <form id="right_button" method="link" action="page_03.html">
-                    <input type="submit" value="Back Door?">
-                </form>
-                <form id="left_button" method="link" action="page_04.html">
-                    <input type="submit" value="Fight?">
-                </form>
-                <br>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="img/font_d.png" alt="D">
+                    <p><i>rakhelm</i> arrives at the front door to find a <i>Krillargian Guard</i>.</p>
+                    <p><i>Do you want to turn around and head to the back door or stay and fight?</i></p>
+                </div>
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="loadPage('pages/page_03.html')">Back Door?</button>
+                <button onclick="loadPage('pages/page_04.html')">Stay and Fight?</button>
             </div>
         </div>
     </body>

@@ -1,29 +1,21 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>You won!</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-       <div id="textbox">
-           <div id="actionbox_no_height">
-               <img class="first_layer_picture" border="0" src="../img/castle_night.gif" width="410" height="250">
-           </div>
-           <div id="text">
-               <img id="firstletter" border="0" src="../img/font_d.png" alt="D" width="50" height="50">
-               <br>
-               <p><i>rakhelm</i> has defeated the evil <i>King Krillarg</i> and has reclaimed the throne!</p>
-               <br>
-               <p>The villagers of <i>Quilldore</i> rejoice.</p>
-               <br>
-               <p><i>Congratulations, your quest is over... FOR NOW...</i></p>
-               <br>
-               <form id="middle_button" method="link" target="_parent" action="../credits.html">
-                   <input type="submit" value="Credits">
-               </form>
-               <br>
-           </div>
-       </div>
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/castle_night.gif">
+            </div>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_d.png" alt="D">
+                    <p><i>rakhelm</i> has defeated the evil <i>King Krillarg</i> and has reclaimed the throne!</p>
+                    <p>The villagers of <i>Quilldore</i> rejoice.</p>
+                    <p><i>Congratulations, your quest is over... FOR NOW...</i></p>
+                </div>
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="goCredits()">Credits</button>
+            </div>
+        </div>
    </body>
 </html>
