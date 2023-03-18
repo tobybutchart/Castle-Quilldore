@@ -106,7 +106,7 @@ function loadPage(url) {
 
             document.getElementById("gameplay-container").innerHTML = xhttp.responseText;
 
-              const s = "init" + url.replace("/", "").replace(".", "").replace("pages", "").replace("html", "");
+              const s = "init" + url.replaceAll("/", "").replaceAll(".", "").replace("pages", "").replace("html", "");
               if (window[s] && typeof window[s] == "function") {
                   window[s]();
               } else {
