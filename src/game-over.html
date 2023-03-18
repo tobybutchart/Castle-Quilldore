@@ -46,16 +46,16 @@
         </audio>
         <div class="full-screen csr-pointer"
 			 style="background: url('img/game_over.gif') no-repeat; background-size: contain; background-position: center;"
-             onmouseover="change(this, 'play_again.gif')"
-             onmouseout="change(this, 'game_over.gif')"
+             onmouseover="change(this, 'img/play_again.gif')"
+             onmouseout="change(this, 'img/game_over.gif')"
              onclick="confirmPlayAgain()">
         </div>
 		<script type="text/javascript" src="msg/js/msg.min.js?v=1.0.0"></script>
-        <script type="text/javascript" src="/js/init.min.js?v=1.0.0"></script>
-        <script type="text/javascript" src="/js/gameplay.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="js/init.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="js/gameplay.min.js?v=1.0.0"></script>
 		<script type="text/javascript">
             function change(elem, src) {
-                elem.style.backgroundImage = `url('img/${src}')`;
+                elem.style.backgroundImage = `url('${src}')`;
             }
 
             function confirmPlayAgain(){

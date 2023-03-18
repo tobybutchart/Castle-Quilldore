@@ -2,14 +2,14 @@ const healthPointsStr = "healthPoints";
 const strengthPointsStr = "strengthPoints";
 const activePageStr = "activePage";
 
-const defaultPage = "pages/page_01.html";
+const defaultPage = "./pages/page_01.html";
 
 let hp = 20;
 let sp = 10;
 let activePage = defaultPage;
 
 function load() {
-    if ((localStorage.getItem(activePageStr) && localStorage.getItem(activePageStr) != defaultPage  && localStorage.getItem(activePageStr) != 'pages/completed.html')
+    if ((localStorage.getItem(activePageStr) && localStorage.getItem(activePageStr) != defaultPage  && localStorage.getItem(activePageStr) != './pages/completed.html')
       && localStorage.getItem(healthPointsStr) && localStorage.getItem(strengthPointsStr)) {
         const fnYes = function() {
             hp = localStorage.getItem(healthPointsStr);
@@ -136,7 +136,13 @@ function loadPage(url) {
     // fallbacks for IE and older browsers:
     xhttp.setRequestHeader("Expires", "Tue, 01 Jan 1980 1:00:00 GMT");
     xhttp.setRequestHeader("Pragma", "no-cache");
-    xhttp.send();
+
+    try {
+        xhttp.send();
+    }
+    catch(err) {
+        console.error(err.message);
+    }
 }
 
 let isRendering = false;
@@ -273,7 +279,7 @@ function mergeImg() {
 
     let int = setInterval(function () {
         bool = !bool;
-        let imgSrc = bool ? '../img/ouija_bottom.png' : '../img/ouija_top.png';
+        let imgSrc = bool ? './img/ouija_bottom.png' : './img/ouija_top.png';
         const img = document.getElementById('gameplay-img');
         img.classList.add("gameplay-img-fadeout");
 
@@ -294,15 +300,15 @@ function mergeImg() {
 function showKey() {
     const key = document.getElementById("gameplay-img-overlay");
 
-    key.src = "../img/flower_to_key.gif";
+    key.src = "./img/flower_to_key.gif";
     setTimeout(function() {
-        key.src = "../img/flower_power.png";
+        key.src = "./img/flower_power.png";
     }, 1000);
 }
 
 function findKey() {
     const fn = function() {
-        loadPage('pages/page_07.html');
+        loadPage('./pages/page_07.html');
     };
 
     showMsg('success', 'You found the key!', fn);
@@ -311,7 +317,7 @@ function findKey() {
 function confirmGuard(guardName) {
     const fn = function() {
         if (guardName == 'blue guard') {
-            loadPage('pages/page_09.html');
+            loadPage('./pages/page_09.html');
         } else if (guardName == 'red guard') {
             goDie();
         }
@@ -323,9 +329,9 @@ function confirmGuard(guardName) {
 function confirmCandleMace(item) {
     const fn = function() {
         if (item == 'candle') {
-            loadPage('pages/page_10.html');
+            loadPage('./pages/page_10.html');
         } else if (item == 'mace') {
-            loadPage('pages/page_11.html');
+            loadPage('./pages/page_11.html');
         }
     };
 
@@ -337,7 +343,7 @@ function confirmGhoulName() {
         const answer = "Casper";
         if (value.toLowerCase() == answer.toLowerCase()){
             showMsg('success', 'Your guess is correct...');
-            loadPage('pages/page_28.html');
+            loadPage('./pages/page_28.html');
         } else {
             showMsg('warning', 'Your guess is WRONG!');
         }
@@ -350,7 +356,7 @@ function confirmGhoulChoice(goodChoice, goodGhoul) {
         if (goodChoice){
             let s = goodGhoul ? "Your were right to trust the ghoul..." : "Your were right to distrust the ghoul...";
             showMsg('success', s);
-            loadPage('pages/page_35.html');
+            loadPage('./pages/page_35.html');
         } else {
             let s = goodGhoul ? "You should ALWAYS trust a ghoul's advice." : "You should NEVER trust a ghoul's advice.";
             showMsg('warning', s, goDie);
@@ -389,11 +395,11 @@ function confirmWeapon(weapon) {
 
     const fn = function() {
         if (weapon.toLowerCase() == 'sword') {
-            loadPage('pages/page_36.html');
+            loadPage('./pages/page_36.html');
         } else if (weapon.toLowerCase() == 'bomb') {
-            loadPage('pages/page_37.html');
+            loadPage('./pages/page_37.html');
         } else if (weapon.toLowerCase() == 'axe') {
-            loadPage('pages/page_38.html');
+            loadPage('./pages/page_38.html');
         }
     };
 
@@ -407,21 +413,21 @@ function choseWeapon(score, type) {
         sp = Number(sp) + Number(score);
     }
 
-    loadPage('pages/page_39.html');
+    loadPage('./pages/page_39.html');
 }
 
 function showSteppingStone() {
     const key = document.getElementById("gameplay-img-overlay");
 
-    key.src = "../img/rock.png";
+    key.src = "./img/rock.png";
     setTimeout(function() {
-        key.src = "../img/rock_gone.png";
+        key.src = "./img/rock_gone.png";
     }, 250);
 }
 
 function findSteppingStone() {
     const fn = function() {
-        loadPage('pages/page_40.html');
+        loadPage('./pages/page_40.html');
     };
 
     showMsg('success', 'You found the stepping stone!', fn);
@@ -439,7 +445,7 @@ function initpage_03() {
 function initpage_04() {
     const fn = function() {
         let args = [[2, 2], [1, 1], [1, 0], [0, 1], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_05.html');
+        rollDice(diceCallback, args, './pages/page_05.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -447,7 +453,7 @@ function initpage_04() {
 function initpage_05() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 2], [2, 2], [1, 1], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_08.html');
+        rollDice(diceCallback, args, './pages/page_08.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -462,7 +468,7 @@ function initpage_06() {
 function initpage_07() {
     const fn = function() {
         let args = [[2, 2], [1, 1], [1, 0], [0, 1], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_08.html');
+        rollDice(diceCallback, args, './pages/page_08.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -486,7 +492,7 @@ function initpage_09() {
 function initpage_10() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [0, 0], [0, 0], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_12.html');
+        rollDice(diceCallback, args, './pages/page_12.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -494,7 +500,7 @@ function initpage_10() {
 function initpage_11() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 2], [2, 2], [1, 1], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_12.html');
+        rollDice(diceCallback, args, './pages/page_12.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -502,7 +508,7 @@ function initpage_11() {
 function initpage_13() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 2], [2, 2], [1, 1], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_15.html');
+        rollDice(diceCallback, args, './pages/page_15.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -524,7 +530,7 @@ function initpage_25() {
 function initpage_26() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 2], [2, 2], [1, 1], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_27.html');
+        rollDice(diceCallback, args, './pages/page_27.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -532,7 +538,7 @@ function initpage_26() {
 function initpage_29() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 0], [0, 2], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_30.html');
+        rollDice(diceCallback, args, './pages/page_30.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -540,7 +546,7 @@ function initpage_29() {
 function initpage_31() {
     const fn = function() {
         let args = [[3, 0], [3, 0], [2, 0], [1, 0], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_32.html');
+        rollDice(diceCallback, args, './pages/page_32.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -548,7 +554,7 @@ function initpage_31() {
 function initpage_32() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [2, 0], [0, 2], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_35.html');
+        rollDice(diceCallback, args, './pages/page_35.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -579,7 +585,7 @@ function initpage_39() {
 function initpage_40() {
     const fn = function() {
         let args = [[2, 2], [2, 2], [1, 0], [0, 1], [0, 0], [0, 0]];
-        rollDice(diceCallback, args, 'pages/page_41.html');
+        rollDice(diceCallback, args, './pages/page_41.html');
     }
     document.getElementById("btn-roll").onclick = fn;
 }
@@ -591,7 +597,7 @@ function initpage_42() {
             const msg = `Your total score is ${total}<br><br>`;
 
             if (total >= 30) {
-                showMsg('success', msg + 'You have beaten the mighty <i>King Krillarg</i>!<br><br><i>Castle Quilldore</i> is yours once again...', function() {loadPage('pages/completed.html')});
+                showMsg('success', msg + 'You have beaten the mighty <i>King Krillarg</i>!<br><br><i>Castle Quilldore</i> is yours once again...', function() {loadPage('./pages/completed.html')});
             } else {
                 showMsg('warning', msg + 'You do not have enough attack points to defeat the mighty <i>King Krillarg</i>...<br><br>YOU DIE', goDie);
             }
