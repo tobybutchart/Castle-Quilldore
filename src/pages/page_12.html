@@ -1,30 +1,22 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 12</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="text"><img id="firstletter" border="0" src="../img/font_w.png" alt="D" width="50" height="50"><br>
-                <p>ell done!</p>
-                <br>
-                <p><i>Drakhelm</i> has defeated the ugly <i>Saarleenth</i>.</p>
-                <br>
-                <p>As <i>Drakhelm</i> walks further into <i>Castle Quilldore</i> he notices a corridor he has never seen before.</p><br>
-                <p><i>Do you wish to enter the room at the end of the corridor or continue on your quest?</i></p>
+        <div id="gameplay-area">
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_w.png" alt="W">
+                    <p>ell done!</p>
+                    <p><i>Drakhelm</i> has defeated the ugly <i>Saarleenth</i>.</p>
+                    <p>As <i>Drakhelm</i> walks further into <i>Castle Quilldore</i> he notices a corridor he has never seen before.</p>
+                    <p><i>Do you wish to enter the room at the end of the corridor or continue on your quest?</i></p>
+                </div>
             </div>
-            <div id="actionbox_no_height">
-                <img class="first_layer_picture" border="0" src="../img/corridor.png" width="410" height="250">
-                <form id="right_button" method="link" action="page_06.html">
-                    <input type="submit" value="Enter room?">
-                </form>
-                <form id="left_button" method="link" action="page_13.html">
-                    <input type="submit" value="Continue?">
-                </form>
-                <br>
-                <br>
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/corridor.png">
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="loadPage('pages/page_06.html')">Enter Room?</button>
+                <button onclick="loadPage('pages/page_13.html')">Continue?</button>
             </div>
         </div>
     </body>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="version" content="2.0.0">
+		<title>Game Over!</title>
+		<meta name="author" content="Toby Butchart">
+		<meta name="description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+        <meta name="keywords" content="HTML5 game, create your own adventure, cyoa, online gamebook, gamebook, castle quilldore, quilldore, BishMusic, Bish Music, Toby Butchart, online game">
+        <meta name="subject" content="Castle Quilldore">
+		<meta name="application-name" content="Castle Quilldore">
+		<meta name="theme-color" content="#693A25">
+		<meta property="og:url" content="">
+		<meta property="og:locale" content="en">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Castle Quilldore">
+		<meta property="og:image" content="img/android-chrome-512x512.png">
+		<meta property="og:image:alt" content="Castle Quilldore">
+		<meta property="og:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta property="og:site_name" content="Castle Quilldore">
+		<meta property="article:author" content="Toby Butchart">
+		<meta name="twitter:url" content="">
+		<meta name="twitter:title" content="Castle Quilldore">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:description" content="Help the brave knight Drakhelm find his way through Castle Quilldore to battle the evil King Krillarg. An HTML5 based create your own adventure game for all ages.">
+		<meta name="twitter:image" content="img/android-chrome-512x512.png">
+		<meta name="twitter:image:alt" content="Castle Quilldore">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#693A25">
+        <meta name="msapplication-TileColor" content="#693A25">
+        <meta name="theme-color" content="#693A25">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Press+Start+2P">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=VT323">
+		<link rel="stylesheet" href="css/style.min.css?v=1.0.0">
+		<link rel="stylesheet" href="msg/css/msg.min.css?v=1.0.0">
+	</head>
+    <body>
+        <audio controls autoplay loop>
+            <source src="audio/game_over.ogg" type="audio/ogg">
+            <source src="audio/game_over.mp3" type="audio/mpeg">
+        </audio>
+        <div class="full-screen csr-pointer"
+			 style="background: url('img/game_over.gif') no-repeat; background-size: contain; background-position: center;"
+             onmouseover="change(this, 'play_again.gif')"
+             onmouseout="change(this, 'game_over.gif')"
+             onclick="confirmPlayAgain()">
+        </div>
+		<script type="text/javascript" src="msg/js/msg.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/init.min.js?v=1.0.0"></script>
+        <script type="text/javascript" src="/js/gameplay.min.js?v=1.0.0"></script>
+		<script type="text/javascript">
+            function change(elem, src) {
+                elem.style.backgroundImage = `url('img/${src}')`;
+            }
+
+            function confirmPlayAgain(){
+                showMsg('confirm', 'Do you want to play again?', goPlay, goCredits);
+            }
+		</script>
+    </body>
+</html>

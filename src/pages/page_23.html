@@ -1,34 +1,23 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 23</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="text"><img id="firstletter" border="0" src="../img/font_w.png" alt="D" width="50" height="50"><br>
-                <p>ell done, you've escaped the maze.</p><br>
-                <p>Would you like <i>Drakhelm</i> to continue toward <i>King Krillarg</i>?</p>
-                <br>
-                <p>Or would you like to venture off course?</p><br>
-                <p><i>Choose Left or Right or continue.</i></p>
-                <br>
-                <form id="right_button" method="link" action="page_24.html">
-                    <input type="submit" value="Right?">
-                </form>
-                <form id="left_button" method="link" action="page_25.html">
-                    <input type="submit" value="Left?">
-                </form>
-                <form id="middle_button" method="link" action="page_26.html">
-                    <input type="submit" value="Continue?">
-                </form>
-                <br>
-                <br>
-                <br>
+        <div id="gameplay-area">
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_w.png" alt="W">
+                    <p>ell done, you've escaped the maze.</p>
+                    <p>Would you like <i>Drakhelm</i> to continue toward <i>King Krillarg</i>?</p>
+                    <p>Or would you like to venture off course?</p>
+                    <p><i>Choose Left or Right or continue.</i></p>
+                </div>
             </div>
-            <div id="actionbox_no_height">
-                <img class="first_layer_picture" border="0" src="../img/choice_of_3.png" width="410" height="250">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/choice_of_3.png">
+            </div>
+            <div id="gameplay-btn-container">
+                <button onclick="loadPage('pages/page_25.html')">Left?</button>
+                <button onclick="loadPage('pages/page_24.html')">Right?</button>
+                <button style="margin-top: 5px;" onclick="loadPage('pages/page_26.html')">Continue?</button>
             </div>
         </div>
     </body>

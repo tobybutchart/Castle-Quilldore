@@ -1,34 +1,23 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 10</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="text"><img id="firstletter" border="0" src="../img/font_y.png" alt="D" width="50" height="50"><br>
-                <p>ou chose well!</p>
-                <br>
-                <p><i>Drakhelm</i> blows out the candle knowing that without sight <i>Saarleenth</i> is much easier to fight...</p>
-                <br>
-                <p>Roll the dice to decide upon your fate...</p>
-                <br>
-                <p><i>Multiply your Strength number by the number you rolled.</i></p>
-                <br>
-                <p> 0 - 20 = Take off 2 Health points and 2 Strength points.</p>
-                <p>21 - 60 = You beat <i>Saarleenth</i> and leave unscathed.</p>
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/black.png">
             </div>
-            <div id="actionbox_no_height">
-                <img class="first_layer_picture" border="0" src="../img/black.png" width="410" height="250">
-                <form id="right_button" method="link" target="_parent" action="../gameover.html">
-                    <input type="submit" value="0 Health points?">
-                </form>
-                <form id="left_button" method="link" action="page_12.html">
-                    <input type="submit" value="Continue?">
-                </form>
-                <br>
-                <br>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_y.png" alt="Y">
+                    <p>ou chose well!</p>
+                    <p><i>Drakhelm</i> blows out the candle knowing that without sight <i>Saarleenth</i> is much easier to fight...</p>
+                    <p>Roll the dice to decide upon your fate...</p>
+                    <p>Your roll will be multiplied by your strength points to give you your attack points:</p>
+                    <table class="tbl-attack-points">
+                        <tr><th>Attack Points</th><th>Outcome</th></tr>
+                        <tr><td>0 - 20</td><td>You will lose 2 Health points and 2 Strength points</td></tr>
+                        <tr><td>21+</td><td>You beat <i>Saarleenth</i> and leave unscathed</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </body>

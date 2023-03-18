@@ -1,24 +1,29 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 35</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="actionbox">
-                <img class="first_layer_picture" border="0" src="../img/table_over.png" width="410" height="250">
-                <a href="page_36.html"><img id="armoury" border="0" src="../img/great_sword_scaled.png" width="130" height="130" /></a>
-                <a href="page_37.html"><img id="armoury" border="0" src="../img/bomb.png" width="130" height="130" /></a>
-                <a href="page_38.html"><img id="armoury" border="0" src="../img/great_axe_scaled.png" width="130" height="130" /></a>
+        <div id="gameplay-area">
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_d.png" alt="D">
+                    <p><i>rakhelm</i> has reached the armoury.</p>
+                    <p>He knows <i>King Krillarg</i> is not far away now so decides to take a weapon.</p>
+                    <p><i>Click on the weapon you would like Darakhelm to take.</i></p>
+                </div>
             </div>
-            <div id="text">
-                <img id="firstletter" border="0" src="../img/font_d.png" alt="D" width="50" height="50">
-                <br>
-                <p><i>rakhelm</i> has reached the armoury. He knows <i>King Krillarg</i> is not far away now so decides to take a weapon.</p>
-                <br>
-                <p><i>Click on the weapon you would like Darakhelm to take.</i></p>
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/table_over_p.png">
+                <img id="gameplay-img-overlay-sword"
+                     class="gameplay-img-overlay"
+                     src="../img/great_sword_scaled.png"
+                     onclick="confirmWeapon('sword')">
+                <img id="gameplay-img-overlay-bomb"
+                     class="gameplay-img-overlay"
+                     src="../img/bomb.png"
+                     onclick="confirmWeapon('bomb')">
+                <img id="gameplay-img-overlay-axe"
+                     class="gameplay-img-overlay"
+                     src="../img/great_axe_scaled.png"
+                     onclick="confirmWeapon('axe')">
             </div>
         </div>
     </body>

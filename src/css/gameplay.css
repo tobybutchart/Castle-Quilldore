@@ -1,57 +1,60 @@
-body{
-	background: #BB;
+body {
 	cursor: url(../img/sword_cursor.png), auto;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	}
+	/* overflow-y: scroll;
+	overflow-x: hidden; */
+	margin: 0px;
+}
+
+#audio-controls button {
+	cursor: url(../img/sword_cursor.png), auto;
+}
 
 p {
 	margin: 4px auto;
 	font-family:Arial,Helvetica,sans-serif;
-	}
+}
 
-input{
+input {
 	cursor: inherit;
-	}
+}
 
--webkit-scrollbar{
+-webkit-scrollbar {
 	cursor: inherit;
-	}
+}
 
-img.first_layer_picture{
+img.first_layer_picture {
 	left: 0px;
 	top: 0px;
-	}
+}
 
-img.second_layer_picture{
+img.second_layer_picture {
 	position: relative;
 	left: 40px;
 	top :-60px;
 	z-index: 0;
-	}
+}
 
-img.rock{
+img.rock {
 	position: relative;
 	left: 115px;
 	top :-100px;
 	z-index: 0;
-	}
+}
 
-img.third_layer_picture{
+img.third_layer_picture {
 	position: relative;
 	left: 0px;
 	top : -255px;
 	z-index: 0;
-	}
+}
 
-img.tile_c
-	{
+img.tile_c {
 	opacity:1.0;
-	}
-img.tile_c:hover
-	{
+}
+
+img.tile_c:hover {
 	opacity:0.4;
-	}
+}
 
 img.tile_a
 	{
@@ -107,7 +110,10 @@ a:hover{
 	}
 
 #textbox{
+	/* padding-top: 25px; */
+	calc(100% - 800px);
 	width: 492px;
+	max-height:
 	border: 4px solid #000000;
 	margin: 0px auto;
 	text-align: left;
@@ -124,10 +130,10 @@ a:hover{
 
 #text{
 	color: #FFFFFF;
-	width: 410px;
+	/* width: 410px; */
 
 	border: 4px solid #000000;
-	margin: 4px auto;
+	margin: 25px;
 	padding: 6px;
 	text-align: left;
 	background: #008000;
@@ -136,12 +142,12 @@ a:hover{
 	}
 
 #actionbox{
-	width: 410px;
-	height: 250px;
+	/* width: 410px;
+	height: 250px; */
 	border: 4px solid #000000;
-	margin: 4px auto;
+	margin: 25px;
 	padding: 6px;
-	text-align: left;
+	text-align: center;
 	background: #008000;
 	border-radius: 0px;
 	box-shadow: none;

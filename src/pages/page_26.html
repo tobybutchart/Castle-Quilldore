@@ -1,34 +1,24 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="../img/skull.png">
-        <title>Page 26</title>
-        <link rel="stylesheet" href="../css/gameplay.css">
-    </head>
     <body>
-        <div id="textbox">
-            <div id="actionbox">
-                <img class="first_layer_picture" border="0" src="../img/guard_2_axe_bros.png" width="410" height="250">
-                <br>
+        <div id="gameplay-area">
+            <div id="gameplay-img-container">
+                <img id="gameplay-img" src="../img/guard_2_axe_bros.png">
             </div>
-            <div id="text"><img id="firstletter" border="0" src="../img/font_w.png" alt="D" width="50" height="50"><br>
-                <p>e remember you! Cry the mighty <i>Brothers Axillsis</i></p><br>
-                <p>You have no choice but to stand and fight...</p>
-                <br>
-                <p>Roll the dice to decide upon your fate...</p>
-                <br>
-                <p><i>Multiply your Strength number by the number you rolled.</i></p>
-                <br>
-                <p> 0 - 40 = Take off 2 Health points and 2 Strength points.</p>
-                <p>41 - 50 = Take off 1 Health point and 1 Strength point.</p>
-                <p>51 - 60 = You beat the <i>Brothers Axillsis</i> and leave unscathed.</p>
-                <form id="right_button" method="link" target="_parent" action="../gameover.html">
-                    <input type="submit" value="0 Health points?">
-                </form>
-                <form id="left_button" method="link" action="page_27.html">
-                    <input type="submit" value="Continue?">
-                </form>
-                <br>
+            <div id="gameplay-text-container">
+                <div id="gameplay-text">
+                    <img id="gameplay-firstletter" src="../img/font_w.png" alt="W">
+                    <p>e remember you! Cry the mighty <i>Brothers Axillisis</i>.</p>
+                    <p>You have no choice but to stand and fight.</p>
+                    <p>Roll the dice to decide upon your fate...</p>
+                    <p>Your roll will be multiplied by your strength points to give you your attack points:</p>
+                    <table class="tbl-attack-points">
+                        <tr><th>Attack Points</th><th>Outcome</th></tr>
+                        <tr><td>0 - 40</td><td>You will lose 2 Health points and 2 Strength points</td></tr>
+                        <tr><td>41 - 50</td><td>You will lose 1 Health point and 1 Strength point</td></tr>
+                        <tr><td>51+</td><td>You beat the <i>Brothers Axillisis</i> and leave unscathed</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </body>
