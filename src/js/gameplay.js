@@ -374,6 +374,10 @@ function confirmGhoulChoice(goodChoice, goodGhoul) {
     showMsg('confirm', msg, fn);
 }
 
+function drinkPoison() {
+    showMsg('warning', 'You drink the potion, and your vision starts to blur...<br><br>You fool! Inside the bottle was poison...<br><br>YOU DIE', goDie);
+}
+
 function drinkPotion(page, goodPotion) {
     let msg = goodPotion ? 'You drink the potion, and feel invigorated!<br><br>2 health points have been added to your total' : 'You drink the potion, and feel awful!<br><br>2 health points have been removed from your total';
 
