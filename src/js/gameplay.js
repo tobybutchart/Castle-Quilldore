@@ -34,6 +34,22 @@ function clearData() {
     localStorage.clear();
 }
 
+function setHP(newHP) {
+    hp = Number(newHP);
+
+    if (Number(hp) < 0) {
+        hp = 0;
+    }
+}
+
+function setSP(newSP) {
+    sp = Number(newSP);
+
+    if (Number(sp) < 0) {
+        sp = 0;
+    }
+}
+
 /* navigation start */
 function navigate(src) {
     window.location.href = src;
@@ -253,8 +269,8 @@ function diceCallback(result, args, nextPage) {
     const minHP = args[index][0];
     const minSP = args[index][1];
 
-    hp -= minHP;
-    sp -= minSP;
+    setHP(hp - minHP);
+    setSP(sp - minSP);
 
     const fn = function() {
         loadPage(nextPage);
@@ -383,9 +399,9 @@ function drinkPotion(page, goodPotion) {
 
     const fn = function() {
         if (goodPotion) {
-            hp = Number(hp) + Number(2);
+            setHP(Number(hp) + Number(2));
         } else {
-            hp = Number(hp) - Number(2);
+            setHP(Number(hp) - Number(2));
         }
 
         loadPage(page);
@@ -412,9 +428,9 @@ function confirmWeapon(weapon) {
 
 function choseWeapon(score, type) {
     if (type.toLowerCase() == 'hp') {
-        hp = Number(hp) + Number(score);
+        setHP(Number(hp) + Number(score));
     } else if (type.toLowerCase() == 'sp') {
-        sp = Number(sp) + Number(score);
+        setSP(Number(sp) + Number(score));
     }
 
     loadPage('./pages/page_39.html');
