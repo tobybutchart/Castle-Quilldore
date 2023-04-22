@@ -106,12 +106,12 @@ function loadPage(url) {
 
             document.getElementById("gameplay-container").innerHTML = xhttp.responseText;
 
-              const s = "init" + url.replaceAll("/", "").replaceAll(".", "").replace("pages", "").replace("html", "");
-              if (window[s] && typeof window[s] == "function") {
-                  window[s]();
-              } else {
-                  console.log('no init fn for: ' + s);
-              }
+            const s = "init" + url.replaceAll("/", "").replaceAll(".", "").replace("pages", "").replace("html", "");
+            if (window[s] && typeof window[s] == "function") {
+                window[s]();
+            } else {
+                console.log('no init fn for: ' + s);
+            }
         }//TODO - else? loading screen, 404?
     };
 
@@ -261,7 +261,7 @@ function diceCallback(result, args, nextPage) {
     }
 
     const attack = `You have rolled a  ${result} giving you ${total} attack point(s)`;
-    const summary = `<br><br>You have lost:<table><tr><td>Health points:</td><td>${minHP}</td></tr><tr><td>Strength points:</td><td>${minSP}</td></tr></table>`;
+    const summary = (Number(minHP) + Number(minSP)) == 0 ? "<br><br>You have lost no health points or strength points</td></tr></table>" : `<br><br>You have lost:<table><tr><td>Health points:</td><td>${minHP}</td></tr><tr><td>Strength points:</td><td>${minSP}</td></tr></table>`;
     const totals = `<br><br>Remaining:<table><tr><td>Health points:</td><td>${hp}</td></tr><tr><td>Strength points:</td><td>${sp}</td></tr></table>`;
 
     if (hp <= 0) {

@@ -1,0 +1,3 @@
+[submodule "src/msg"]
+	path = src/msg
+	url = https://github.com/tobybutchart/msg
